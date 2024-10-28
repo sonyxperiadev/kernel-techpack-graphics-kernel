@@ -8,10 +8,7 @@ ifeq ($(KGSL_PATH),)
 KGSL_PATH=$(src)
 endif
 
-# If we're not in an Android tree, select KGSL config
-ifeq ($(ANDROID_BUILD_TOP),)
 CONFIG_QCOM_KGSL = y
-endif
 
 ifeq ($(CONFIG_ARCH_WAIPIO), y)
 	include $(KGSL_PATH)/config/gki_waipiodisp.conf
